@@ -1,0 +1,24 @@
+.front {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+}
+
+.front__contents {
+  background-color: blue;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.front__contents__siteTitle {
+  background-color: red;
+}
+
+.front__contents__siteSubTitle {
+  background-color: yellow;
+}

@@ -1,3 +1,7 @@
+// title on the top z-index 1
+// right nav z-index 2
+// music z-index 999
+
 // $topTitle:'Playfair Display',
 // serif;
 // $subTitle:serif;
@@ -10,18 +14,23 @@
 // Sub font
 // $sub-font:
 // media querry
-$tab:960px;
-$mb:614px;
+
+// media querry
+$tab:768px;
+$pc:1024px;
 $sp:370px;
 
+// box
+$desktopMaxContainer:1200px;
+
 @mixin tab {
-  @media (max-width: ($tab)) {
+  @media (min-width: ($tab)) {
     @content;
   }
 }
 
-@mixin mb {
-  @media (max-width: ($mb)) {
+@mixin pc {
+  @media (min-width: ($pc)) {
     @content;
   }
 }

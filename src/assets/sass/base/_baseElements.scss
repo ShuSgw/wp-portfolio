@@ -1,3 +1,12 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./src/assets/images/global/2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 h1 {
   font-size: 3em;
 }
@@ -9,3 +18,26 @@ small {
 a {
   color: white;
 }
+
+.audio {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-primary {
+  position: relative;
+  z-index: 999;
+}
+
+// backgorund motion
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#wrap {}

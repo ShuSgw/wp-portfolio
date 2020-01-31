@@ -1,3 +1,11 @@
+.sidebar.right {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #448AFF;
+  z-index: 2;
+}
+
 .sidebar.left {
   position: fixed;
   top: 0;
@@ -7,12 +15,6 @@
   background: #448AFF;
 }
 
-.sidebar.right {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #448AFF;
-}
 
 .sidebar.bottom {
   left: 0;

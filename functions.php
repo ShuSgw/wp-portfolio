@@ -25,7 +25,9 @@ function add_all_cssandjs()
 
     wp_enqueue_script('sidebar', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js', array('jquery'));
 
-    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar'));
+    wp_enqueue_script('particles', get_stylesheet_directory_uri().'/src/assets/js/particles.min.js', array('jquery'));
+
+    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
 
     // jquery.sidebar.min.js
     // css
