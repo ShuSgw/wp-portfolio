@@ -1,0 +1,33 @@
+// $topTitle:'Playfair Display',
+// serif;
+// $subTitle:serif;
+
+// // color
+// $primary-text-color: #C49C6B;
+
+// Base font
+// $base-font:
+// Sub font
+// $sub-font:
+// media querry
+$tab:960px;
+$mb:614px;
+$sp:370px;
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin mb {
+  @media (max-width: ($mb)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}

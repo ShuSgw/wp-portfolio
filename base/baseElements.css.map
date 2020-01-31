@@ -1,0 +1,1 @@
+{"version":3,"sources":["base/baseElements.scss"],"names":[],"mappings":"AAAA;EACE,eAAc;CACf;;AAED;EACE,gBAAe;CAChB;;AAED;EACE,kBAAiB;CAClB;;AAED;EACE,aAAY;CACb","file":"baseElements.css","sourcesContent":["h1 {\n  font-size: 3em;\n}\n\nsmall {\n  font-size: .7em;\n}\n\n.current {\n  background: black;\n}\n\na {\n  color: white;\n}\n"]}

@@ -1,0 +1,17 @@
+h1 {
+  font-size: 3em;
+}
+
+small {
+  font-size: .7em;
+}
+
+.current {
+  background: black;
+}
+
+a {
+  color: white;
+}
+
+/*# sourceMappingURL=baseElements.css.map */
