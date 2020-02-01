@@ -7,9 +7,16 @@ body {
   background-size: cover;
 }
 
+h1,
+p,
+small {
+  color: white;
+}
+
 h1 {
   font-size: 3em;
 }
+
 
 small {
   font-size: .7em;
@@ -26,11 +33,6 @@ a {
   bottom: 0;
 }
 
-.btn-primary {
-  position: relative;
-  z-index: 999;
-}
-
 // backgorund motion
 .background {
   position: absolute;
@@ -40,4 +42,18 @@ a {
   z-index: -1;
 }
 
-#wrap {}
+#wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  background: red;
+  margin-top: auto;
+  text-align: center;
+}
+
+// .container {
+//   opacity: 0;
+// }

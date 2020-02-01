@@ -1,6 +1,5 @@
 </div><!-- container -->
-</div><!-- wrap -->
-<footer id='footer'>
+<footer>
     <small>
         <?php echo 'Copyright'; ?>&copy;
         <?php echo '&nbsp;'; bloginfo('title'); ?>
@@ -8,6 +7,7 @@
     </small>
     <?php wp_footer(); ?>
 </footer>
+</div><!-- wrap -->
 </body>
 
 </html>

@@ -17,12 +17,18 @@
     </audio>
     <canvas class="background">
     </canvas>
-    <div id='wrap'>
+    <div id='wrap' <?php if (is_front_page()): echo 'style="overflow:hidden;"'; ?> <?php endif; ?>>
         <header>
             <!-- nav btn -->
-            <a href="#" class="btn btn-primary" data-action="toggle" data-side="right">
+            <!-- <a href="#" class="btn btn-primary" data-action="toggle" data-side="right">
                 <span>Toggle Right</span>
-            </a>
+            </a> -->
+            <!-- <button class='btn-primary' id='sample'>sample</button> -->
+            <div class="hamburger" id='sample'>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </div>
             <?php get_template_part($tempPath.'template-nav'); ?>
         </header>
         <div class='container'>

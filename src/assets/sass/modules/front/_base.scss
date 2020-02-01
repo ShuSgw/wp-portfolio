@@ -1,24 +1,43 @@
 .front {
-  width: 100%;
   height: 100vh;
   position: absolute;
   top: 0;
+  width: 100%;
 }
 
 .front__contents {
-  background-color: blue;
-  text-align: center;
   position: absolute;
+  text-align: center;
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
+  overflow: hidden;
 }
 
 .front__contents__siteTitle {
-  background-color: red;
+  position: relative;
+  font-size: 3em;
+  padding: .5em 0;
+  letter-spacing: 2px;
+  overflow: hidden;
+
+  @include sp {
+    letter-spacing: 4px;
+    font-size: 2.2em;
+  }
+
+  @include pc {
+    letter-spacing: 4px;
+    font-size: 6em;
+  }
 }
 
 .front__contents__siteSubTitle {
-  background-color: yellow;
+  font-size: 1em;
+  line-height: 1.5;
+
+  @include pc {
+    font-size: 2em;
+  }
 }

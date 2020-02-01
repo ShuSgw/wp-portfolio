@@ -13,23 +13,30 @@ add_action('wp_enqueue_scripts', 'load_script');
 function add_all_cssandjs()
 {
     // js
+
+    // plugins
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(), '3.2.1');
 
-    wp_enqueue_script('smoothState', get_stylesheet_directory_uri().'/src/assets/js/jquery.smoothState.min.js', array('jquery'));
+    wp_enqueue_script('smoothState', get_stylesheet_directory_uri().'/src/assets/js/plugins/jquery.smoothState.min.js', array('jquery'));
 
     wp_enqueue_script('TweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js', array('jquery'));
 
-    wp_enqueue_script('fullpage', get_stylesheet_directory_uri().'/src/assets/js/fullpage.js', array('jquery'));
-
-    wp_enqueue_script('footerFixed', get_stylesheet_directory_uri().'/src/assets/js/footerFixed.js', array('jquery'));
+    wp_enqueue_script('fullpage', get_stylesheet_directory_uri().'/src/assets/js/plugins/fullpage.js', array('jquery'));
 
     wp_enqueue_script('sidebar', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-sidebar/3.3.2/jquery.sidebar.min.js', array('jquery'));
 
-    wp_enqueue_script('particles', get_stylesheet_directory_uri().'/src/assets/js/particles.min.js', array('jquery'));
+    wp_enqueue_script('particles', get_stylesheet_directory_uri().'/src/assets/js/plugins/particles.min.js', array('jquery'));
 
-    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
+    // modules
 
-    // jquery.sidebar.min.js
+    wp_enqueue_script('openNav', get_stylesheet_directory_uri().'/src/assets/js/modules/openNav.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
+
+    wp_enqueue_script('front-opening', get_stylesheet_directory_uri().'/src/assets/js/modules/front-opening.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
+
+    wp_enqueue_script('initialSlide', get_stylesheet_directory_uri().'/src/assets/js/modules/initialSlide.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'front-opening'));
+
+    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide'));
+
     // css
     wp_enqueue_style('maincss', get_template_directory_uri().'/style.css');
     // $phpDatas = array(
