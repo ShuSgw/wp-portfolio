@@ -17,14 +17,15 @@
     </audio>
     <canvas class="background">
     </canvas>
-    <div id='wrap' <?php if (is_front_page()): echo 'style="overflow:hidden;"'; ?> <?php endif; ?>>
+    <div id='wrap' <?php if (is_front_page()): echo 'class="js-viewPointHeigt" style="overflow:hidden;"'; ?>
+        <?php endif; ?>>
         <header>
             <!-- nav btn -->
             <!-- <a href="#" class="btn btn-primary" data-action="toggle" data-side="right">
                 <span>Toggle Right</span>
             </a> -->
             <!-- <button class='btn-primary' id='sample'>sample</button> -->
-            <div class="hamburger" id='sample'>
+            <div class="hamburger">
                 <span class="hamburger__line"></span>
                 <span class="hamburger__line"></span>
                 <span class="hamburger__line"></span>

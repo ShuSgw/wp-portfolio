@@ -9,11 +9,18 @@ function addBlacklistClass() {
   });
 }
 function gatheringFuncForSmoothJs() {
-  frontOpening();
+  // for adjust mobile URL bar
+  var hSize = $(window).height();
+  $(".js-viewPointHeigt").css("min-height", hSize);
+  $(".front").css("min-height", hSize);
   addBlacklistClass();
-  $("#fullpage").fullpage();
+  $("#fullpage").fullpage({
+    // scrollingSpeed: 400,
+    menu: "#projectMenu"
+  });
   initialSlide();
   openNav();
+  openSidebar();
 }
 
 $(function() {
@@ -57,6 +64,8 @@ $(function() {
     }
   };
   $("#wrap").smoothState(settings);
+
+  frontOpening(); // only when the website is opened
   gatheringFuncForSmoothJs();
 });
 

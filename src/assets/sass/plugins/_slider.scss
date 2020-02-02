@@ -3,6 +3,11 @@
   z-index: 999;
 }
 
+// jsの遅れでナビが一瞬だけ表示するのを防ぐ
+.hiddenNav {
+  opacity: 0;
+}
+
 .sidebar.right {
   top: 0;
   right: 0;
@@ -12,12 +17,19 @@
 }
 
 .sidebar.left {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 50px;
   background: #448AFF;
+  z-index: 2;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 

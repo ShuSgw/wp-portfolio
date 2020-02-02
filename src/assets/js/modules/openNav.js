@@ -41,19 +41,19 @@ function openNav() {
   });
 }
 
-function slidesFunctions() {
-  // when it is open
-  $(".sidebar.right").on("sidebar:opened", function() {
-    $(".container").on("click", function() {
-      $(".sidebar.right").trigger("sidebar:close");
-    });
-  });
-  // to close when the page is clicked
-  $(".global__ul__li").on("click", function() {
-    $(".sidebar.right").trigger("sidebar:close");
-  });
+// function slidesFunctions() {
+//   // when it is open
+//   $(".sidebar.right").on("sidebar:opened", function() {
+//     $(".container").on("click", function() {
+//       $(".sidebar.right").trigger("sidebar:close");
+//     });
+//   });
+//   // to close when the page is clicked
+//   $(".global__ul__li").on("click", function() {
+//     $(".sidebar.right").trigger("sidebar:close");
+//   });
 
-  $("#sample").on("click", function() {
-    $(".sidebar.right").trigger("sidebar:toggle");
-  });
-}
+//   $("#globalNav").on("click", function() {
+//     $(".sidebar.right").trigger("sidebar:toggle");
+//   });
+// }

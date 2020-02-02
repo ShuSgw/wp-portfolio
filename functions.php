@@ -33,9 +33,11 @@ function add_all_cssandjs()
 
     wp_enqueue_script('front-opening', get_stylesheet_directory_uri().'/src/assets/js/modules/front-opening.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
 
-    wp_enqueue_script('initialSlide', get_stylesheet_directory_uri().'/src/assets/js/modules/initialSlide.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'front-opening'));
+    wp_enqueue_script('initialSlide', get_stylesheet_directory_uri().'/src/assets/js/modules/initialSlide.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
 
-    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide'));
+    wp_enqueue_script('openSidebar', get_stylesheet_directory_uri().'/src/assets/js/modules/openSidebar.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
+
+    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide', 'front-opening', 'openSidebar'));
 
     // css
     wp_enqueue_style('maincss', get_template_directory_uri().'/style.css');
@@ -105,4 +107,39 @@ function get_current_category()
     $cat = get_category($id);
 
     return $cat;
+}
+
+// anable widget
+if (function_exists('register_sidebar')) {
+    register_sidebar(array(
+        'name' => 'SideBar1',
+        'id' => 'sidebar-1',
+        'description' => 'frist widget',
+        'class' => 's1',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+        'name' => 'SideBar2',
+        'id' => 'sidebar-2',
+        'description' => 'second widget',
+        'class' => 's2',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
+    register_sidebar(array(
+        'name' => 'SideBar3',
+        'id' => 'sidebar-3',
+        'description' => 'second widget',
+        'class' => 's2',
+        'before_widget' => '<div class="widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ));
 }

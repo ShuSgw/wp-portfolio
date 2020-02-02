@@ -1,4 +1,4 @@
-<div class="sidebars">
+<div class="sidebars hiddenNav">
     <nav class='sidebar right'>
         <?php wp_nav_menu(
             array(
