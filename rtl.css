@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Shu's Portfolio
 */
@@ -87,8 +88,8 @@ a {
   color: white;
 }
 
-.audio {
-  position: fixed;
+audio {
+  display: none;
   z-index: 999;
   left: 0;
   bottom: 0;
@@ -131,12 +132,6 @@ footer {
   top: 2.5%;
   left: 5%;
   z-index: 99999;
-}
-
-@media (min-width: 1024px) {
-  .hamburger {
-    display: none;
-  }
 }
 
 .hamburger__line {
@@ -467,7 +462,6 @@ footer {
 }
 
 .sidebar.right {
-  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -513,6 +507,52 @@ footer {
   position: fixed;
   color: white;
   font-size: 1em;
+}
+
+.audioBtn {
+  color: white;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  z-index: 999;
+  font-size: 1.5em;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*角丸*/
+}
+
+.audioBtn:hover {
+  background: red;
+}
+
+.audioStopping {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  background: white;
+  border-radius: 50px;
+  width: 100%;
+  height: 1.5px;
+  -webkit-transform: translate(50%, -50%) rotate(-45deg);
+  transform: translate(50%, -50%) rotate(-45deg);
 }
 
 .projectMenuBtn {

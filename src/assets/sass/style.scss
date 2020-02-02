@@ -19,7 +19,38 @@ Theme Name: Shu's Portfolio
 
 
 
+// audiobtn
+.audioBtn {
+  color: white;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  z-index: 999;
+  font-size: 1.5em;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  /*角丸*/
+  &:hover {
+    background: black;
+  }
+}
+
+.audioStopping {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: white;
+  border-radius: 50px;
+  width: 100%;
+  height: 1.5px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
 
 // svg
 .projectMenuBtn {

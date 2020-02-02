@@ -40,6 +40,7 @@ function add_all_cssandjs()
     wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide', 'front-opening', 'openSidebar'));
 
     // css
+    wp_enqueue_style('foundicons', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css');
     wp_enqueue_style('maincss', get_template_directory_uri().'/style.css');
     // $phpDatas = array(
     //     'url' => get_stylesheet_directory_uri(),
@@ -121,7 +122,6 @@ if (function_exists('register_sidebar')) {
         'before_title' => '<h2>',
         'after_title' => '</h2>',
     ));
-
     register_sidebar(array(
         'name' => 'SideBar2',
         'id' => 'sidebar-2',
@@ -135,7 +135,7 @@ if (function_exists('register_sidebar')) {
     register_sidebar(array(
         'name' => 'SideBar3',
         'id' => 'sidebar-3',
-        'description' => 'second widget',
+        'description' => 'third widget',
         'class' => 's2',
         'before_widget' => '<div class="widget">',
         'after_widget' => '</div>',
