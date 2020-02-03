@@ -24,6 +24,7 @@ small {
 
 a {
   color: white;
+  text-decoration: none;
 }
 
 audio {
@@ -45,13 +46,11 @@ audio {
 #wrap {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 footer {
+  // padding-top: 5em;
   margin-top: auto;
   text-align: center;
 }
-
-// .container {
-//   opacity: 0;
-// }

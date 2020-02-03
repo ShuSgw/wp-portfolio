@@ -13,6 +13,7 @@ function gatheringFuncForSmoothJs() {
   var hSize = $(window).height();
   $(".js-viewPointHeigt").css("min-height", hSize);
   $(".front").css("min-height", hSize);
+  // contents__main
   addBlacklistClass();
   $("#fullpage").fullpage({
     // scrollingSpeed: 400,
@@ -21,6 +22,7 @@ function gatheringFuncForSmoothJs() {
   initialSlide();
   openNav();
   openSidebar();
+  var h = $("#wrap").height();
   var isPlaying = false;
   $(".audioBtn").click(function() {
     var audio = document.getElementById("audio");
@@ -36,12 +38,48 @@ function gatheringFuncForSmoothJs() {
       isPlaying = false;
     };
   });
+
+  var timer = null;
+  $(".sidebars").on("mousewheel", function() {
+    $("body").css({ overflow: "hidden" });
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      $("body").css({ overflow: "inherit" });
+    }, 200);
+  });
+
+  $(".global_widget ul").hide();
+  $(".global_widget")
+    .find(".widget__heading")
+    .on("click", function() {
+      $(this)
+        .next("ul")
+        .stop()
+        .slideToggle(250, function() {
+          if (
+            $(this)
+              .prev(".widget__heading")
+              .hasClass("openedArrow")
+          ) {
+            $(this)
+              .prev(".widget__heading")
+              .stop()
+              .removeClass("openedArrow");
+          } else {
+            $(this)
+              .prev(".widget__heading")
+              .stop()
+              .addClass("openedArrow");
+          }
+        });
+    });
 }
 
 $(function() {
   var settings = {
     anchors: "a",
     blacklist: ".wp-link",
+
     onStart: {
       duration: 280, // ms
       render: function($wrap) {
@@ -52,7 +90,6 @@ $(function() {
           y: -100,
           opacity: 0
         });
-
         // to stop using fullpage multiple times
         if ($(".fp-enabled").length) {
           setTimeout(function() {

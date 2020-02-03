@@ -8,30 +8,6 @@
   opacity: 0;
 }
 
-.sidebar.right {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #448AFF;
-  z-index: 2;
-}
-
-.sidebar.left {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background: #448AFF;
-  z-index: 2;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 
 .sidebar.bottom {
   left: 0;
@@ -48,6 +24,7 @@
   height: 50px;
   background: #03A9F4;
 }
+
 
 .sidebars>.sidebar {
   box-shadow: 0 0 5px rgba(158, 154, 154, 0.64);

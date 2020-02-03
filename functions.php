@@ -37,7 +37,9 @@ function add_all_cssandjs()
 
     wp_enqueue_script('openSidebar', get_stylesheet_directory_uri().'/src/assets/js/modules/openSidebar.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
 
-    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide', 'front-opening', 'openSidebar'));
+    wp_enqueue_script('removeAnchor', get_stylesheet_directory_uri().'/src/assets/js/modules/removeAnchor.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
+
+    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide', 'front-opening', 'openSidebar', 'removeAnchor'));
 
     // css
     wp_enqueue_style('foundicons', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css');
@@ -60,8 +62,6 @@ add_action('wp_head', 'add_favicon');
 
 // title tag
 add_theme_support('title-tag');
-// add image size
-add_image_size('sidebar-thumb', 575, 575, true);
 
 // navigation settings
 function twpp_setup_theme()
@@ -117,9 +117,9 @@ if (function_exists('register_sidebar')) {
         'id' => 'sidebar-1',
         'description' => 'frist widget',
         'class' => 's1',
-        'before_widget' => '<div class="widget">',
+        'before_widget' => '<div class="global_widget">',
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
+        'before_title' => '<h2 class="widget__heading">',
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
@@ -143,3 +143,10 @@ if (function_exists('register_sidebar')) {
         'after_title' => '</h2>',
     ));
 }
+//anable thumnails
+add_theme_support('post-thumbnails');
+
+// add image size
+// add image size
+add_image_size('dynamicProjectThumb', 400, 550, true);
+add_image_size('archive', 400, 250, true);

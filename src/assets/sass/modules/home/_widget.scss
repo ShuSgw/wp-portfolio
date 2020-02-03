@@ -1,0 +1,45 @@
+.global_widget {
+  li {
+    overflow: hidden;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    padding: .5em 3em .5em 1em;
+
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.widget__heading {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px white;
+    border-right: solid 2px white;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    -ms-transform: translateY(-50%) rotate(135deg);
+    -webkit-transform: translateY(-50%) rotate(135deg);
+    transform: translateY(-50%) rotate(135deg);
+    transition: all 100ms 0s ease;
+  }
+}
+
+.openedArrow {
+  &:after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}

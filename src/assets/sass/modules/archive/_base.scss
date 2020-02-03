@@ -1,0 +1,41 @@
+.categoryTitle {}
+
+.flexBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tab {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+.flexBox__contents {
+  width: 100%;
+  padding-top: 2em;
+
+  @include tab {
+    width: 48%;
+  }
+
+  @include pc {
+    width: 30%;
+  }
+}
+
+.flexBox__thumb {
+  width: 100%;
+  height: auto;
+  background: red;
+}
+
+.flexBox__contents {
+  font-size: 1.5em;
+}
+
+//

@@ -1,7 +1,5 @@
 </div><!-- container -->
-<?php if (is_home()):?>
 <?php get_sidebar(); ?>
-<?php endif; ?>
 <footer>
     <small>
         <?php echo 'Copyright'; ?>&copy;
