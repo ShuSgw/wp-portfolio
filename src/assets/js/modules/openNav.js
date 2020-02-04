@@ -20,6 +20,7 @@ function openNav() {
     if (menuToggle.reversed()) {
       menuToggle.restart();
       $(".sidebar.right").trigger("sidebar:open");
+      $(".sidebar.left").trigger("sidebar:close");
     } else {
       menuToggle.reverse();
       $(".sidebar.right").trigger("sidebar:close");

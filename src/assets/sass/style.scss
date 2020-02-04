@@ -38,7 +38,7 @@ Theme Name: Shu's Portfolio
   position: fixed;
   right: 7.55%;
   bottom: 6%;
-  z-index: 999;
+  z-index: 3;
   font-size: 1.5em;
   border-radius: 50%;
   width: 30px;
@@ -49,9 +49,9 @@ Theme Name: Shu's Portfolio
   align-items: center;
 
   /*角丸*/
-  &:hover {
-    background: black;
-  }
+  // &:hover {
+  //   background: black;
+  // }
 }
 
 .audioStopping {
@@ -103,6 +103,7 @@ Theme Name: Shu's Portfolio
     transform: translate(50%, -50%) rotate(-42deg);
     font-size: .5em;
     z-index: 999;
+    font-family: $secondFont;
 
     @include pc {
       font-size: .8em;
@@ -196,7 +197,7 @@ Theme Name: Shu's Portfolio
 .modalBg {
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: black;
 }
 
 .modalWrapper {
@@ -206,17 +207,41 @@ Theme Name: Shu's Portfolio
   transform: translate(-50%, -50%);
   width: 70%;
   max-width: 500px;
-  padding: 10px 30px;
+  padding: 30px 30px;
   background-color: #fff;
 }
 
 .closeModal {
-  position: absolute;
-  top: 0.5rem;
-  right: 1rem;
   cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #668ad8;
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  font-family: $secondFont;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 30%;
+
+  &:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    border-bottom: none;
+  }
 }
 
 .modalContents {
   color: black;
+  text-align: center;
+  font-family: $secondFont;
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+
+
+.hiddenfullpage {
+  opacity: 0;
 }

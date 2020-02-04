@@ -7,13 +7,16 @@
         </h1>
         <div class='flexBox'>
             <?php if (have_posts()): while (have_posts()):the_post(); ?>
-            <div class='flexBox__contents'>
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('archive', array('class' => 'flexBox__thumb')); ?>
-                    <p class='flexBox__text'><?php the_title(); ?></p>
-                    <?php //the_category();?>
-                </a>
-            </div>
+            <a class='flexBox__contents' href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()):?>
+                <?php the_post_thumbnail('archive', array('class' => 'flexBox__contents__thumb')); ?>
+                <?php else : ?>
+
+                <img src='https://dummyimage.com/medrect' alt="">
+                <?php endif; ?>
+                <div class='flexBox__contents__text'><?php the_title(); ?></div>
+                <?php //the_category();?>
+            </a>
             <?php endwhile; endif; ?>
         </div>
     </div>

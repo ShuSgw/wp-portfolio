@@ -25,7 +25,6 @@ $font-numbers-tab: 5em;
   cursor: pointer;
   text-align: center;
   animation: floating 1s ease-in-out infinite alternate;
-  background: red;
 
   img {
     width: 100%;
@@ -45,28 +44,30 @@ $font-numbers-tab: 5em;
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  color: #DE0000;
+  color: white;
   width: 100%;
-  font-family: 'Anton',
-    sans-serif;
   display: flex;
   justify-content: space-between;
-  //   overflow: hidden;
   cursor: pointer;
   transition: all .2s;
+  font-family: $firstFont;
+  font-weight: bold;
 }
 
 .projectListBox__title__num {
   font-size: 6em;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   max-width: 90px;
   width: 100%;
+  font-family: $secondFont;
+  font-weight: bold;
 
   @include tab {
     width: 60px;
     font-size: $font-numbers-tab;
+    justify-content: flex-end;
   }
 
   @include pc {
@@ -104,22 +105,20 @@ $font-numbers-tab: 5em;
   }
 }
 
-.zero {
-  position: absolute;
-  font-family: 'Anton',
-    sans-serif;
-  font-size: 6em;
-  color: #DE0000;
-  z-index: 1;
-  top: 50%;
-  left: 3.5%;
-  transform: translate(0, -50%);
+// .zero {
+//   position: absolute;
+//   font-size: 6em;
+//   color: #DE0000;
+//   z-index: 1;
+//   top: 50%;
+//   left: 3.5%;
+//   transform: translate(0, -50%);
 
-  @include tab {
-    font-size: $font-numbers-tab;
-  }
+//   @include tab {
+//     font-size: $font-numbers-tab;
+//   }
 
-  @include pc {
-    font-size: $font-numbers-pc;
-  }
-}
+//   @include pc {
+//     font-size: $font-numbers-pc;
+//   }
+// }

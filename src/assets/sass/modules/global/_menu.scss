@@ -8,7 +8,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  width: 40%;
+  width: 50%;
 
   @include pc {
     max-width: 300px;
@@ -36,11 +36,15 @@
 }
 
 .global__ul__li__a {
-  font-size: 1.3em;
+  font-size: 1.1em;
   position: relative;
   display: inline-block;
   padding: 2em 3em 2em 1em;
   width: 100%;
+
+  @include pc {
+    padding: 2em 3em 2em 3em;
+  }
 
   &:hover {
     color: black;
@@ -63,7 +67,7 @@
   cursor: pointer;
   top: 5%;
   right: 7%;
-  z-index: 99999;
+  z-index: 3;
 
   @include pc {
     // display: none;

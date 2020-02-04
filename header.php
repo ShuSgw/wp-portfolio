@@ -20,7 +20,7 @@
             <div class="modalContents">
                 Audio will be played !
             </div>
-            <div id="closeModal">
+            <div id="closeModal" class='closeModal'>
                 OK
             </div>
         </div>

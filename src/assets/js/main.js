@@ -124,9 +124,11 @@ $(function() {
   $("#wrap").smoothState(settings);
 
   gatheringFuncForSmoothJs();
+  $("body").prepend("<div class='balck'><div>");
 
-  // $("#modalArea").fadeIn();
+  $("#modalArea").show();
   $("#closeModal").click(function() {
+    $(".front__contents").removeClass("titleHiden");
     frontOpening(); // only when the website is opened
     $("#modalArea").remove();
     var audio = document.getElementById("audio");
