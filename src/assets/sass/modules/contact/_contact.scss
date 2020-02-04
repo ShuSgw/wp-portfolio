@@ -1,0 +1,61 @@
+.wpcf7-form {
+  input[type="submit"] {
+    width: 15%;
+    min-width: 100px;
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    font-size: .9em;
+    font-family: $secondFont;
+
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    padding: 1em;
+    margin-top: 1em;
+    font-size: .8em;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+
+    &::placeholder {
+      //   font-size: 1.5em;
+      font-family: $secondFont;
+      color: white;
+      opacity: .5;
+    }
+  }
+
+  input {}
+
+  textarea {
+    height: 250px;
+  }
+}
+
+.ajax-loader {
+  position: absolute;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border: none;
+  font-family: $secondFont;
+  font-size: 1.5em;
+  color: red;
+}
+
+div.wpcf7-response-output {
+  margin: 0;
+  padding: 0;
+}
+
+span.wpcf7-not-valid-tip {
+  font-family: $secondFont;
+}

@@ -73,16 +73,33 @@ body {
 }
 
 h1,
+h2,
+h4,
 p,
 li,
 small {
   color: white;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: 3.5em;
   font-family: "Abril Fatface", cursive;
   font-weight: bold;
+}
+
+h2 {
+  font-size: 3.5em;
+  font-family: "Abril Fatface", cursive;
+  font-weight: bold;
+  padding-bottom: .3em;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-family: "Abril Fatface", cursive;
+  font-weight: bold;
+  padding-bottom: .8em;
 }
 
 p {
@@ -137,6 +154,27 @@ audio {
 footer {
   margin-top: auto;
   text-align: center;
+}
+
+.wptime-plugin-progress-wrap,
+.wptime-plugin-progress-bar {
+  border: solid 2.5px white;
+}
+
+.wptime-plugin-progress-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent !important;
+}
+
+.wptime-plugin-progress-bar {
+  background: white !important;
+}
+
+.wptime-plugin-progress-wrap span {
+  color: black !important;
+  font-family: "Lato", sans-serif !important;
+  padding-left: 1em;
 }
 
 .sidebar.right {
@@ -250,6 +288,7 @@ footer {
 .contents {
   width: 86%;
   margin: 0 auto;
+  max-width: 1240px;
 }
 
 .contents__main {
@@ -708,6 +747,83 @@ footer {
   .flexBox__contents__text {
     font-size: 1em;
   }
+}
+
+.wpcf7-form input[type="submit"] {
+  width: 15%;
+  min-width: 100px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  font-size: .9em;
+  font-family: "Lato", sans-serif;
+}
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: .8em;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.wpcf7-form input::-webkit-input-placeholder,
+.wpcf7-form textarea::-webkit-input-placeholder {
+  font-family: "Lato", sans-serif;
+  color: white;
+  opacity: .5;
+}
+
+.wpcf7-form input:-ms-input-placeholder,
+.wpcf7-form textarea:-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+  color: white;
+  opacity: .5;
+}
+
+.wpcf7-form input::-ms-input-placeholder,
+.wpcf7-form textarea::-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+  color: white;
+  opacity: .5;
+}
+
+.wpcf7-form input::placeholder,
+.wpcf7-form textarea::placeholder {
+  font-family: "Lato", sans-serif;
+  color: white;
+  opacity: .5;
+}
+
+.wpcf7-form textarea {
+  height: 250px;
+}
+
+.ajax-loader {
+  position: absolute;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border: none;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5em;
+  color: red;
+}
+
+div.wpcf7-response-output {
+  margin: 0;
+  padding: 0;
+}
+
+span.wpcf7-not-valid-tip {
+  font-family: "Lato", sans-serif;
 }
 
 /*!
@@ -1204,8 +1320,97 @@ footer {
   font-size: 1.2em;
 }
 
-.hiddenfullpage {
-  opacity: 0;
+.projectImaegs {
+  padding-top: 1.5em;
+}
+
+.projectImaegs img {
+  width: 100%;
+  height: auto;
+}
+
+.tags {
+  padding: .8em 0 0 0;
+}
+
+.tags__item {
+  display: inline-block;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px 5px 28px;
+  margin: 3px 5px 3px 0;
+  font-size: .9em;
+  position: relative;
+}
+
+.tags__item:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.blue:before {
+  background: blue;
+}
+
+.pink:before {
+  background: pink;
+}
+
+.red:before {
+  background: red;
+}
+
+.green:before {
+  background: green;
+}
+
+.purple:before {
+  background: purple;
+}
+
+.orange:before {
+  background: orange;
+}
+
+.yellow:before {
+  background: yellow;
+}
+
+.white:before {
+  background: white;
+}
+
+.wp-block-button {
+  width: 100%;
+}
+
+.wp-block-button__link {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: "Lato", sans-serif;
+  border: solid 3px white;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 1.3em 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .wp-block-button__link:hover {
+    background-color: white;
+    color: black;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

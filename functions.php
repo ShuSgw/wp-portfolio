@@ -145,5 +145,6 @@ add_theme_support('post-thumbnails');
 
 // add image size
 // add image size
+add_image_size('projectsImages', 1200, 800, true);
 add_image_size('dynamicProjectThumb', 400, 550, true);
 add_image_size('archive', 400, 250, true);

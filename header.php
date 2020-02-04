@@ -18,7 +18,9 @@
         <div id="modalBg" class="modalBg"></div>
         <div class="modalWrapper">
             <div class="modalContents">
-                Audio will be played !
+                Audio will be played.
+                <br>
+                To stop the audio, click the button in the lower right hand corner.
             </div>
             <div id="closeModal" class='closeModal'>
                 OK

@@ -8,16 +8,33 @@ body {
 }
 
 h1,
+h2,
+h4,
 p,
 li,
 small {
   color: white;
+  line-height: 1.5;
 }
 
 h1 {
   font-size: 3.5em;
   font-family: $firstFont;
   font-weight: bold;
+}
+
+h2 {
+  font-size: 3.5em;
+  font-family: $firstFont;
+  font-weight: bold;
+  padding-bottom: .3em;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-family: $firstFont;
+  font-weight: bold;
+  padding-bottom: .8em;
 }
 
 p {
@@ -67,4 +84,34 @@ footer {
   // padding-top: 5em;
   margin-top: auto;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+// wordperss plugin
+.wptime-plugin-progress-wrap,
+.wptime-plugin-progress-bar {
+  border: solid 2.5px white;
+  // background: transparent !important;
+}
+
+.wptime-plugin-progress-wrap {
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent !important;
+}
+
+.wptime-plugin-progress-bar {
+  background: white !important;
+}
+
+.wptime-plugin-progress-wrap span {
+  color: black !important;
+  font-family: $secondFont !important;
+  padding-left: 1em;
 }

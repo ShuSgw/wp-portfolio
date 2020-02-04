@@ -126,7 +126,7 @@ $(function() {
   gatheringFuncForSmoothJs();
   $("body").prepend("<div class='balck'><div>");
 
-  $("#modalArea").show();
+  // $("#modalArea").show();
   $("#closeModal").click(function() {
     $(".front__contents").removeClass("titleHiden");
     frontOpening(); // only when the website is opened

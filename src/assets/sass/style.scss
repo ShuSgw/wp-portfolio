@@ -27,6 +27,8 @@ Theme Name: Shu's Portfolio
 // single
 @import './modules/single/base';
 
+// contact
+@import './modules/contact/contact';
 // plugins
 @import './plugins/fullpage.min';
 @import './plugins/slider';
@@ -241,7 +243,99 @@ Theme Name: Shu's Portfolio
   font-size: 1.2em;
 }
 
+.projectImaegs {
+  padding-top: 1.5em;
 
-.hiddenfullpage {
-  opacity: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+// tags
+.tags {
+  padding: .8em 0 0 0;
+}
+
+.tags__item {
+  display: inline-block;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 5px;
+
+  color: white;
+  padding: 5px 10px 5px 28px;
+  margin: 3px 5px 3px 0;
+  font-size: .9em;
+  position: relative;
+}
+
+.tags__item:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
+}
+
+.blue:before {
+  background: blue;
+}
+
+.pink:before {
+  background: pink;
+}
+
+.red:before {
+  background: red;
+}
+
+.green:before {
+  background: green;
+}
+
+.purple:before {
+  background: purple;
+}
+
+.orange:before {
+  background: orange;
+}
+
+.yellow:before {
+  background: yellow;
+}
+
+.white:before {
+  background: white;
+}
+
+
+
+// single
+.wp-block-button {
+  width: 100%;
+}
+
+.wp-block-button__link {
+  background-color: transparent;
+  border-radius: 0;
+  font-family: $secondFont;
+  border: solid 3px white;
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 1.3em 0;
+  width: 100%;
+
+  @include tab {
+    &:hover {
+      background-color: white;
+      color: black;
+      -webkit-transition: all .2s;
+      transition: all .2s;
+    }
+  }
 }
