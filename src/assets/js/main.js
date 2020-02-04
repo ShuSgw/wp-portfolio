@@ -19,17 +19,22 @@ function gatheringFuncForSmoothJs() {
     // scrollingSpeed: 400,
     menu: "#projectMenu"
   });
+
   initialSlide();
   openNav();
   openSidebar();
   var h = $("#wrap").height();
-  var isPlaying = false;
+
+  var isPlaying = true;
+
   $(".audioBtn").click(function() {
     var audio = document.getElementById("audio");
     if (isPlaying) {
       audio.pause();
+      $(".audioStopping").show();
     } else {
       audio.play();
+      $(".audioStopping").hide();
     }
     audio.onplaying = function() {
       isPlaying = true;
@@ -51,7 +56,8 @@ function gatheringFuncForSmoothJs() {
   $(".global_widget ul").hide();
   $(".global_widget")
     .find(".widget__heading")
-    .on("click", function() {
+    .on("click", function(e) {
+      e.stopPropagation();
       $(this)
         .next("ul")
         .stop()
@@ -117,8 +123,16 @@ $(function() {
   };
   $("#wrap").smoothState(settings);
 
-  frontOpening(); // only when the website is opened
   gatheringFuncForSmoothJs();
+
+  // $("#modalArea").fadeIn();
+  $("#closeModal").click(function() {
+    frontOpening(); // only when the website is opened
+    $("#modalArea").remove();
+    var audio = document.getElementById("audio");
+    audio.play();
+    $(".audioStopping").hide();
+  });
 });
 
 // background

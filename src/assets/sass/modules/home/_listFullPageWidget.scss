@@ -1,6 +1,8 @@
 .wrapProjectsAndWidgetLists {
   padding-right: 2em;
   position: relative;
+  height: 100%;
+  width: 40%;
 
   &:after {
     content: '';
@@ -12,10 +14,18 @@
     position: absolute;
     top: 50%;
     right: 5%;
-    -ms-transform: translateY(-50%) rotate(45deg);
-    -webkit-transform: translateY(-50%) rotate(45deg);
-    transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(225deg);
+    -webkit-transform: translateY(-50%) rotate(225deg);
+    transform: translateY(-50%) rotate(225deg);
   }
+}
+
+.wrapProjectsAndWidgetLists__closing {
+  position: absolute;
+  right: 0;
+  width: 5%;
+  height: inherit;
+  display: none;
 }
 
 .sidebar.left {
@@ -29,6 +39,9 @@
   scrollbar-width: none;
   background: #242424;
 
+  @include pc {
+    max-width: 300px;
+  }
 
   &::-webkit-scrollbar {
     display: none;
@@ -42,8 +55,11 @@
 
 .projectListTitle,
 .widget__heading {
-  padding: .5em;
+  padding: 1em .5em;
   font-size: 1.5em;
+  background: #242424;
+  font-family: $secondFont;
+  font-weight: bold;
 }
 
 // overflow: hidden;
@@ -69,6 +85,7 @@
 
 .homeList__li__a__proejctTitle {
   padding: 1em 3em .5em 0em;
+  line-height: 1.8;
 }
 
 .homeList__li__a__category {

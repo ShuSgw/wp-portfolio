@@ -43,4 +43,13 @@ function openSidebar() {
       }
     }
   });
+  $(".wrapProjectsAndWidgetLists").on("click", function(event) {
+    if (!menuToggle.reversed()) {
+      menuToggle.reverse();
+      $(".sidebar.left").trigger("sidebar:close");
+      if ($(".fp-enabled").length) {
+        $(".fullpage").fullpage.setAllowScrolling(true);
+      }
+    }
+  });
 }

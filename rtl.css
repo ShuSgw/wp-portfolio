@@ -2,6 +2,8 @@
 /*
 Theme Name: Shu's Portfolio
 */
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap");
 /* http://meyerweb.com/eric/tools/css/reset/
    v5.0.1 | 20191019
    License: none (public domain)
@@ -72,12 +74,25 @@ body {
 
 h1,
 p,
+li,
 small {
   color: white;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
+  font-family: "Roboto Slab", serif;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+li {
+  font-family: "Lato", sans-serif;
 }
 
 small {
@@ -87,6 +102,7 @@ small {
 a {
   color: white;
   text-decoration: none;
+  font-family: "Lato", sans-serif;
 }
 
 audio {
@@ -130,6 +146,13 @@ footer {
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  width: 40%;
+}
+
+@media (min-width: 1024px) {
+  .sidebar.right {
+    max-width: 300px;
+  }
 }
 
 .sidebar.right::-webkit-scrollbar {
@@ -154,7 +177,7 @@ footer {
   font-size: 1.3em;
   position: relative;
   display: inline-block;
-  padding: 1em 1em 1em 3em;
+  padding: 2em 1em 2em 3em;
   width: 100%;
 }
 
@@ -188,7 +211,7 @@ footer {
   width: 90%;
   border-radius: 5px;
   opacity: 1;
-  background: silver;
+  background: white;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
@@ -215,18 +238,15 @@ footer {
 
 .container {
   height: 100%;
-  background: red;
 }
 
 .contents {
   width: 86%;
   margin: 0 auto;
-  background: pink;
 }
 
 .contents__main {
   padding-top: 8em;
-  background: green;
   padding-bottom: 8em;
 }
 
@@ -235,6 +255,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .front__contents {
@@ -255,6 +276,7 @@ footer {
   padding: .5em 0;
   letter-spacing: 2px;
   overflow: hidden;
+  font-weight: bold;
 }
 
 @media (max-width: 370px) {
@@ -285,6 +307,8 @@ footer {
 .wrapProjectsAndWidgetLists {
   padding-left: 2em;
   position: relative;
+  height: 100%;
+  width: 40%;
 }
 
 .wrapProjectsAndWidgetLists:after {
@@ -297,8 +321,16 @@ footer {
   position: absolute;
   top: 50%;
   left: 5%;
-  -webkit-transform: translateY(-50%) rotate(-45deg);
-  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-225deg);
+  transform: translateY(-50%) rotate(-225deg);
+}
+
+.wrapProjectsAndWidgetLists__closing {
+  position: absolute;
+  left: 0;
+  width: 5%;
+  height: inherit;
+  display: none;
 }
 
 .sidebar.left {
@@ -313,6 +345,12 @@ footer {
   background: #242424;
 }
 
+@media (min-width: 1024px) {
+  .sidebar.left {
+    max-width: 300px;
+  }
+}
+
 .sidebar.left::-webkit-scrollbar {
   display: none;
 }
@@ -323,8 +361,11 @@ footer {
 
 .projectListTitle,
 .widget__heading {
-  padding: .5em;
+  padding: 1em .5em;
   font-size: 1.5em;
+  background: #242424;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .homeList__li {
@@ -349,6 +390,7 @@ footer {
 
 .homeList__li__a__proejctTitle {
   padding: 1em 0em .5em 3em;
+  line-height: 1.8;
 }
 
 .homeList__li__a__category {
@@ -373,6 +415,7 @@ footer {
 .widget__heading {
   position: relative;
   cursor: pointer;
+  background: #242424;
 }
 
 .widget__heading:after {
@@ -951,7 +994,7 @@ footer {
   cursor: pointer;
   bottom: 5%;
   right: 6.5%;
-  z-index: 9;
+  z-index: 1;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -1063,6 +1106,47 @@ footer {
   fill: silver;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+/* モーダルCSS */
+.modalArea {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  /*サイトによってここの数値は調整 */
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.closeModal {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.modalContents {
+  color: black;
 }
 
 /*# sourceMappingURL=rtl.css.map */

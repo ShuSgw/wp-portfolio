@@ -1,6 +1,7 @@
 <!-- sidebar left -->
 <div class="sidebars hiddenNav">
     <div class='sidebar left wrapProjectsAndWidgetLists'>
+        <div class='wrapProjectsAndWidgetLists__closing'></div>
         <ul class='homeList'>
             <?php if (is_active_sidebar('sidebar-1')) :?>
             <?php dynamic_sidebar('sidebar-1'); ?>
@@ -23,6 +24,7 @@
             <?php endforeach; ?>
         </ul>
     </div>
+</div>
 </div>
 
 <!-- btn -->

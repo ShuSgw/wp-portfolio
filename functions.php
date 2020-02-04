@@ -28,7 +28,6 @@ function add_all_cssandjs()
     wp_enqueue_script('particles', get_stylesheet_directory_uri().'/src/assets/js/plugins/particles.min.js', array('jquery'));
 
     // modules
-
     wp_enqueue_script('openNav', get_stylesheet_directory_uri().'/src/assets/js/modules/openNav.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
 
     wp_enqueue_script('front-opening', get_stylesheet_directory_uri().'/src/assets/js/modules/front-opening.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
@@ -37,9 +36,7 @@ function add_all_cssandjs()
 
     wp_enqueue_script('openSidebar', get_stylesheet_directory_uri().'/src/assets/js/modules/openSidebar.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
 
-    wp_enqueue_script('removeAnchor', get_stylesheet_directory_uri().'/src/assets/js/modules/removeAnchor.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles'));
-
-    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide', 'front-opening', 'openSidebar', 'removeAnchor'));
+    wp_enqueue_script('mainJs', get_stylesheet_directory_uri().'/src/assets/js/main.js', array('jquery', 'smoothState', 'TweenMax', 'fullpage', 'sidebar', 'particles', 'openNav', 'initialSlide', 'front-opening', 'openSidebar'));
 
     // css
     wp_enqueue_style('foundicons', 'https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css');

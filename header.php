@@ -14,6 +14,17 @@
     <i class="fi-volume audioBtn">
         <div class='audioStopping'></div>
     </i>
+    <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg"></div>
+        <div class="modalWrapper">
+            <div class="modalContents">
+                Audio will be played !
+            </div>
+            <div id="closeModal">
+                OK
+            </div>
+        </div>
+    </section>
     <canvas class="background">
     </canvas>
     <div id='wrap' <?php if (is_front_page()): echo 'class="js-viewPointHeigt" style="overflow:hidden;"'; ?>

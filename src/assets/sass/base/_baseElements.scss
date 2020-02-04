@@ -9,14 +9,26 @@ body {
 
 h1,
 p,
+li,
 small {
   color: white;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 3.5em;
+  font-family: $firstFont;
 }
 
+p {
+  font-family: $secondFont;
+  font-size: 1.3em;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+li {
+  font-family: $secondFont;
+}
 
 small {
   font-size: .7em;
@@ -25,6 +37,7 @@ small {
 a {
   color: white;
   text-decoration: none;
+  font-family: $secondFont;
 }
 
 audio {
